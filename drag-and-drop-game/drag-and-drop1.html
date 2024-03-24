@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="icon" type="image/png" href="../img/drag-drop.png">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="bg-drag drag-and-drop1">
+    <div class="instructions">
+        <h1>DRAG AND DROP</h1>
+        <p>The girl is reading a book under the beach umbrella.</p>
+    </div>
+
+    <audio id="audio-correct">
+        <source src="../audio/correct.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="main-wrapper">
+        <div class="background-img">
+            <img src="../img/umbrella.png">
+        </div>
+
+        <div class="dropArea click-correct" id="dropArea1" ondrop="drop(event, 'dropArea1')" ondragover="allowDrop(event, true)">
+        +
+        </div>
+
+        <div class="dropArea" id="dropArea2" ondrop="drop(event, 'dropArea2')" ondragover="allowDrop(event)">
+        +
+        </div>
+
+        <img class="box" src="../img/girl.png" id="dragImage1" draggable="true" ondragstart="drag(event)">
+    </div>
+
+    <div class="next" id="nextBtn">
+        <a href="drag-and-drop2.html" id="link">NEXT<i class="fa fa-arrow-right"></i></a>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

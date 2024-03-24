@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click It</title>
+    <link rel="icon" type="image/png" href="../img/click-it.png">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="bg-drag click-it-8">
+    <div class="instructions">
+        <h1>CLICK IT</h1>
+        <p>Choose the correct answer.</p>
+    </div>
+
+    <div class="click-wrapper">
+        <div class="click-img bucket">
+            <img src="../img/bucket.png" alt="bucket">
+        </div>
+
+        <audio id="audio-correct">
+            <source src="../audio/correct.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="audio-wrong">
+            <source src="../audio/wrong.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="click-text">
+            <p><a href="" class="click-correct">Bucket and Spade</a></p>
+            <p><a href="" class="click-wrong">Cup and Spoon</a></p>
+        </div>
+        <div class="popup-container"> 
+            <div class="click-icon tick-icon">
+                <i class="fa fa-check"></i>
+            </div>            
+            <div class="click-icon x-icon">
+                X
+            </div>
+        </div>
+    </div>
+
+    <div class="back" id="backBtn">
+        <a href="click-it7.html" id="backlink"><i class="fa fa-arrow-left"></i>BACK</a>
+    </div>
+
+    <div class="next" id="nextBtn">
+        <a href="click-it9.html" id="link">NEXT<i class="fa fa-arrow-right"></i></a>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,75 +1,453 @@
-:root {
-    --primary: rgb(136, 197, 253);
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../font/OpenDyslexic-Regular.otf") format("truetype");
 }
 
-.text-colour {
-    color: var(--primary);
+body {
+  font-family: "OpenDyslexic";
 }
 
-.back-to-top {
-    position: fixed;
-    display: none;
-    right: 30px;
-    bottom: 30px;
-    z-index: 99;
+body.main-word-search {
+  background-color: #F7CBCB;
 }
 
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+.title, p {
+  text-align: center;
 }
 
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
+.word-search {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.first-col-img,
+.second-col-img {
+  display: flex;
+  flex-direction: column;
+  margin: auto
+}
+
+.first-col-img .icecream {
+  margin: 0 -100px 0 100px !important;
+}
+
+.second-col-img .fish {
+  margin: 0 100px 0 -100px !important;
+}
+
+.first-col-img img,
+.second-col-img img {
+  max-width: 200px;
+  height: auto;
+  z-index: -1;
+}
+
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 42px);
+  gap: 2px;
+  margin: auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+.found {
+  background-color: rgb(54, 220, 54);
 }
 
 
-/*** Landing Page ***/
-/* Slider */
-.slider {
-    position: relative;
-    max-height: 100%;
-    height: 780px;
-    overflow: hidden;
-    margin-bottom: -7px;
-  }
-  
-  #bg-video {
-    min-width: 100%;
-    min-height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-    background-position: 10% 0%;
-    position: relative;
-  }
-  
-  #bg-video::-webkit-media-controls {
-    display: none !important;
-  }
-  
-  .video-overlay {
-    position: absolute;
-    background-color: rgba(31,39,43,0.6);
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-  }
-  
-  .slider .block {
-    position: absolute;
-    top: 390px;
-    width: 100%;
-    transform: translateY(-50%);
-  }
+/*** Drag and Drop ***/
+/* Drag and Drop 1 */
+body.bg-drag {
+  background: url("../img/background.png") fixed 50% 50%;
+  background-size: cover;
+}
 
-  .slider .block h1 {
-    font-size: 70px;
-    color: var(--primary);
-  }
+.instructions h1 {
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+}
+
+.instructions p {
+  margin: 0;
+  font-size: 22px;
+}
+
+.main-wrapper {
+  position: fixed;
+  left: 50%;
+}
+
+.dropArea {
+  width: 60px;
+  height: 60px;
+  border: 4px dashed rgb(0, 0, 0);
+  text-align: center;
+  line-height: 60px;
+  position: absolute;
+}
+
+.fa-thumbs-up {
+  position: absolute;
+  color: yellow;
+  font-size: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    transition: 0.5s ease-in-out;
+}
+
+.drag-and-drop1 .background-img img {
+  position: relative;
+  z-index: -1;
+  width: 550px;
+  left: -50%;
+  margin-top: 30px;
+}
+
+
+.drag-and-drop1 .box {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  left: 5%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop1 #dropArea1 {
+  bottom: 25%;
+  left: 12%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop1 #dropArea2 {
+  top: 15%;
+  left: -22%;
+  transform: translateX(-50%);
+}
+
+.next, .back {
+  color: black;
+  position: absolute;
+  bottom: 0;
+  margin: 80px;
+}
+
+.next {
+  text-align: right;
+  right: 0;
+}
+
+.back {
+  text-align: left;
+  left: 0;
+}
+
+.next a, .back a {
+  color: #000;
+  font-size: 25px;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.next i {
+  margin-left: 10px;
+}
+
+.page-transition {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+/* Drag and Drop 2 */
+.drag-and-drop2 .background-img img {
+  position: relative;
+  z-index: -1;
+  width: 450px;
+  left: -50%;
+  margin-top: 70px;
+}
+
+.drag-and-drop2 .box {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  left: 0%;
+  bottom: -20%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop2 #dropArea1 {
+  top: 28%;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop2 #dropArea2 {
+  bottom: 18%;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+/* Drag and Drop 3 */
+.drag-and-drop3 .background-img img {
+  position: relative;
+  z-index: -1;
+  width: 650px;
+  left: -50%;
+  margin-top: 100px;
+}
+
+.drag-and-drop3 .box {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  left: 5%;
+  bottom: -35%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop3 #dropArea1 {
+  top: 37%;
+  left: 5%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop3 #dropArea2 {
+  bottom: 7%;
+  left: 5%;
+  transform: translateX(-50%);
+}
+
+/* Drag and Drop 4 */
+body.bg-drag.drag-and-drop4 {
+  background: url("../img/background-sand.jpg") fixed 50% 50%;
+  background-size: cover;
+}
+
+.drag-and-drop4 .background-img img {
+  position: relative;
+  z-index: -1;
+  width: 700px;
+  left: -50%;
+  margin-top: 10px;
+}
+
+.drag-and-drop4 .box {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  left: 0%;
+  bottom: -50%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop4 #dropArea1 {
+  top: 45%;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop4 #dropArea2 {
+  top: 45%;
+  left: 60%;
+  transform: translateX(-50%);
+}
+
+/* Drag and Drop 5 */
+.drag-and-drop5 .background-img img {
+  position: relative;
+  z-index: -1;
+  width: 420px;
+  left: -50%;
+  margin-top: 0px;
+}
+
+.drag-and-drop5 .box {
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  left: 0%;
+  bottom: -47%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop5 #dropArea1 {
+  top: 85%;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop5 #dropArea2 {
+  top: 50%;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+/* Drag and Drop 6 */
+.drag-and-drop6 .background-img img {
+  position: relative;
+  z-index: -1;
+  width: 380px;
+  left: -50%;
+  margin-top: 30px;
+}
+
+.drag-and-drop6 .box {
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  left: 0%;
+  bottom: -35%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop6 #dropArea1 {
+  top: 70%;
+  left: 60%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop6 #dropArea2 {
+  top: 70%;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+
+/*** Click it ***/
+/* Click it 1 */
+.click-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.click-img {
+  margin: 0 200px;
+}
+
+.click-img img {
+  max-width: 450px;
+  height: auto;
+}
+
+.click-text p {
+  margin: 100px 0;
+}
+
+.click-text a {
+  color: black;
+  font-size: 40px;
+  font-weight: bolder;
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 100px;
+  padding: 7px 42px;
+  text-decoration: none;
+}
+
+.click-text a:hover {
+  color: orange;
+}
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.click-icon {
+  display: none;
+}
+
+.tick-icon {
+  font-size: 450px;
+  color: rgb(62, 222, 62);
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    transition: 0.5s ease-in-out;
+}
+
+.x-icon {
+  font-size: 450px;
+  color: red;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    transition: 0.5s ease-in-out;
+}
+
+/* Click it 2 */
+.click-img.fish img {
+  max-width: 550px;
+  height: auto;
+}
+
+/* Click it 5 */
+.click-img.starfish img, .click-img.ball img {
+  width: 400px;
+  height: auto;
+}
+
+/* Click it 6 */
+.click-img.flip-flops img {
+  width: 600px;
+  height: auto;
+}
+
+/* Click it 7 */
+.click-img.beach-chair img {
+  width: 500px;
+  height: auto;
+}
+
+/* Click it 8 */
+.click-img.bucket img {
+  width: 380px;
+  height: auto;
+}
