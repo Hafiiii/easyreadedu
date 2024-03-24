@@ -1,191 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Word Search</title>
-<link rel="icon" type="image/png" href="img/word-search.png">
-<link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search</title>
+    <link rel="icon" type="image/png" href="img/word-search.png">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="canonical" href="https://hafiiii.github.io/easyreadedu/"/>
 </head>
+
 <body class="main-word-search">
-        <h1 class="title">Word Search Game</h1>
-        <div class="word-search">
-            <div class="first-col-img">
-                <img src="img/book.png" class="book" alt="book">
-                <img src="img/icecream.png" class="icecream" alt="icecream">
-                <img src="img/sandcastle.png" class="sandcastle" alt="sandcastle">
-            </div>
-            <div class="word-grid">
-                <div class="cell" data-letter="D">D</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="A">A</div>
-                <div class="cell" data-letter="N">N</div>
-                <div class="cell" data-letter="D">D</div>
-                <div class="cell" data-letter="C">C</div>
-                <div class="cell" data-letter="A">A</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="T">T</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="S">S</div>
-        
-                <div class="cell" data-letter="Y">Y</div>
-                <div class="cell" data-letter="M">M</div>
-                <div class="cell" data-letter="W">W</div>
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="K">K</div>
-                <div class="cell" data-letter="J">J</div>
-                <div class="cell" data-letter="V">V</div>
-                <div class="cell" data-letter="A">A</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="B">B</div>
-                <div class="cell" data-letter="C">C</div>
-                <div class="cell" data-letter="F">F</div>
-        
-                <div class="cell" data-letter="T">T</div>
-                <div class="cell" data-letter="X">X</div>
-                <div class="cell" data-letter="J">J</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="G">G</div>
-                <div class="cell" data-letter="I">I</div>
-                <div class="cell" data-letter="D">D</div>
-                <div class="cell" data-letter="N">N</div>
-                <div class="cell" data-letter="A">A</div>
-                <div class="cell" data-letter="O">O</div>
-                <div class="cell" data-letter="T">T</div>
-                <div class="cell" data-letter="K">K</div>
-        
-                <div class="cell" data-letter="I">I</div>
-                <div class="cell" data-letter="C">C</div>
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="C">C</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="A">A</div>
-                <div class="cell" data-letter="M">M</div>
-                <div class="cell" data-letter="G">G</div>
-                <div class="cell" data-letter="I">I</div>
-                <div class="cell" data-letter="P">P</div>
-                <div class="cell" data-letter="X">X</div>
-        
-                <div class="cell" data-letter="X">X</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="O">O</div>
-                <div class="cell" data-letter="Y">Y</div>
-                <div class="cell" data-letter="O">O</div>
-                <div class="cell" data-letter="Y">Y</div>
-                <div class="cell" data-letter="D">D</div>
-                <div class="cell" data-letter="N">N</div>
-                <div class="cell" data-letter="P">P</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="I">I</div>
-        
-                <div class="cell" data-letter="P">P</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="F">F</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="G">G</div>
-                <div class="cell" data-letter="O">O</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="H">H</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="P">P</div>
-        
-                <div class="cell" data-letter="C">C</div>
-                <div class="cell" data-letter="M">M</div>
-                <div class="cell" data-letter="V">V</div>
-                <div class="cell" data-letter="K">K</div>
-                <div class="cell" data-letter="Q">Q</div>
-                <div class="cell" data-letter="P">P</div>
-                <div class="cell" data-letter="U">U</div>
-                <div class="cell" data-letter="B">B</div>
-                <div class="cell" data-letter="O">O</div>
-                <div class="cell" data-letter="O">O</div>
-                <div class="cell" data-letter="K">K</div>
-                <div class="cell" data-letter="T">T</div>
-        
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="H">H</div>
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="G">G</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="B">B</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="M">M</div>
-        
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="E">E</div>
-                <div class="cell" data-letter="K">K</div>
-                <div class="cell" data-letter="V">V</div>
-                <div class="cell" data-letter="B">B</div>
-                <div class="cell" data-letter="U">U</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="U">U</div>
-                <div class="cell" data-letter="Y">Y</div>
-                <div class="cell" data-letter="T">T</div>
-                <div class="cell" data-letter="C">C</div>
-        
-                <div class="cell" data-letter="M">M</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="A">A</div>
-                <div class="cell" data-letter="F">F</div>
-                <div class="cell" data-letter="I">I</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="H">H</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="G">G</div>
-                <div class="cell" data-letter="S">S</div>
-        
-                <div class="cell" data-letter="M">M</div>
-                <div class="cell" data-letter="G">G</div>
-                <div class="cell" data-letter="C">C</div>
-                <div class="cell" data-letter="B">B</div>
-                <div class="cell" data-letter="X">X</div>
-                <div class="cell" data-letter="G">G</div>
-                <div class="cell" data-letter="U">U</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="I">I</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="K">K</div>
-                <div class="cell" data-letter="SM">M</div>
-        
-                <div class="cell" data-letter="T">T</div>
-                <div class="cell" data-letter="R">R</div>
-                <div class="cell" data-letter="O">O</div>
-                <div class="cell" data-letter="Z">Z</div>
-                <div class="cell" data-letter="L">L</div>
-                <div class="cell" data-letter="W">W</div>
-                <div class="cell" data-letter="U">U</div>
-                <div class="cell" data-letter="N">N</div>
-                <div class="cell" data-letter="S">S</div>
-                <div class="cell" data-letter="A">A</div>
-                <div class="cell" data-letter="C">C</div>
-                <div class="cell" data-letter="S">S</div>  
-            </div>
-            <div class="second-col-img">
-                <img src="img/shell.png" class="shell" alt="shell">
-                <img src="img/fish.png" class="fish" alt="fish">
-            </div>
+    <h1 class="title">Word Search Game</h1>
+    <div class="word-search">
+        <div class="first-col-img">
+            <img src="img/book.png" class="book" alt="book">
+            <img src="img/icecream.png" class="icecream" alt="icecream">
+            <img src="img/sandcastle.png" class="sandcastle" alt="sandcastle">
         </div>
+        <div class="word-grid">
+            <div class="cell" data-letter="D">D</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="A">A</div>
+            <div class="cell" data-letter="N">N</div>
+            <div class="cell" data-letter="D">D</div>
+            <div class="cell" data-letter="C">C</div>
+            <div class="cell" data-letter="A">A</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="T">T</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="S">S</div>
+    
+            <div class="cell" data-letter="Y">Y</div>
+            <div class="cell" data-letter="M">M</div>
+            <div class="cell" data-letter="W">W</div>
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="K">K</div>
+            <div class="cell" data-letter="J">J</div>
+            <div class="cell" data-letter="V">V</div>
+            <div class="cell" data-letter="A">A</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="B">B</div>
+            <div class="cell" data-letter="C">C</div>
+            <div class="cell" data-letter="F">F</div>
+    
+            <div class="cell" data-letter="T">T</div>
+            <div class="cell" data-letter="X">X</div>
+            <div class="cell" data-letter="J">J</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="G">G</div>
+            <div class="cell" data-letter="I">I</div>
+            <div class="cell" data-letter="D">D</div>
+            <div class="cell" data-letter="N">N</div>
+            <div class="cell" data-letter="A">A</div>
+            <div class="cell" data-letter="O">O</div>
+            <div class="cell" data-letter="T">T</div>
+            <div class="cell" data-letter="K">K</div>
+    
+            <div class="cell" data-letter="I">I</div>
+            <div class="cell" data-letter="C">C</div>
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="C">C</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="A">A</div>
+            <div class="cell" data-letter="M">M</div>
+            <div class="cell" data-letter="G">G</div>
+            <div class="cell" data-letter="I">I</div>
+            <div class="cell" data-letter="P">P</div>
+            <div class="cell" data-letter="X">X</div>
+    
+            <div class="cell" data-letter="X">X</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="O">O</div>
+            <div class="cell" data-letter="Y">Y</div>
+            <div class="cell" data-letter="O">O</div>
+            <div class="cell" data-letter="Y">Y</div>
+            <div class="cell" data-letter="D">D</div>
+            <div class="cell" data-letter="N">N</div>
+            <div class="cell" data-letter="P">P</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="I">I</div>
+    
+            <div class="cell" data-letter="P">P</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="F">F</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="G">G</div>
+            <div class="cell" data-letter="O">O</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="H">H</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="P">P</div>
+    
+            <div class="cell" data-letter="C">C</div>
+            <div class="cell" data-letter="M">M</div>
+            <div class="cell" data-letter="V">V</div>
+            <div class="cell" data-letter="K">K</div>
+            <div class="cell" data-letter="Q">Q</div>
+            <div class="cell" data-letter="P">P</div>
+            <div class="cell" data-letter="U">U</div>
+            <div class="cell" data-letter="B">B</div>
+            <div class="cell" data-letter="O">O</div>
+            <div class="cell" data-letter="O">O</div>
+            <div class="cell" data-letter="K">K</div>
+            <div class="cell" data-letter="T">T</div>
+    
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="H">H</div>
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="G">G</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="B">B</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="M">M</div>
+    
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="E">E</div>
+            <div class="cell" data-letter="K">K</div>
+            <div class="cell" data-letter="V">V</div>
+            <div class="cell" data-letter="B">B</div>
+            <div class="cell" data-letter="U">U</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="U">U</div>
+            <div class="cell" data-letter="Y">Y</div>
+            <div class="cell" data-letter="T">T</div>
+            <div class="cell" data-letter="C">C</div>
+    
+            <div class="cell" data-letter="M">M</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="A">A</div>
+            <div class="cell" data-letter="F">F</div>
+            <div class="cell" data-letter="I">I</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="H">H</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="G">G</div>
+            <div class="cell" data-letter="S">S</div>
+    
+            <div class="cell" data-letter="M">M</div>
+            <div class="cell" data-letter="G">G</div>
+            <div class="cell" data-letter="C">C</div>
+            <div class="cell" data-letter="B">B</div>
+            <div class="cell" data-letter="X">X</div>
+            <div class="cell" data-letter="G">G</div>
+            <div class="cell" data-letter="U">U</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="I">I</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="K">K</div>
+            <div class="cell" data-letter="SM">M</div>
+    
+            <div class="cell" data-letter="T">T</div>
+            <div class="cell" data-letter="R">R</div>
+            <div class="cell" data-letter="O">O</div>
+            <div class="cell" data-letter="Z">Z</div>
+            <div class="cell" data-letter="L">L</div>
+            <div class="cell" data-letter="W">W</div>
+            <div class="cell" data-letter="U">U</div>
+            <div class="cell" data-letter="N">N</div>
+            <div class="cell" data-letter="S">S</div>
+            <div class="cell" data-letter="A">A</div>
+            <div class="cell" data-letter="C">C</div>
+            <div class="cell" data-letter="S">S</div>  
+        </div>
+        <div class="second-col-img">
+            <img src="img/shell.png" class="shell" alt="shell">
+            <img src="img/fish.png" class="fish" alt="fish">
+        </div>
+    </div>
 
 
-        <p>Find the words: ICECREAM, SANDCASTLE, SHELL, FISH, BOOK</p>
-        <p>Click on the letters in order to form the words.</p>
+    <p>Find the words: ICECREAM, SANDCASTLE, SHELL, FISH, BOOK</p>
+    <p>Click on the letters in order to form the words.</p>
 
 
-        <script src="lib/canvas-confetti/src/confetti.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1/dist/canvas-confetti.min.js"></script>
+    <script src="lib/canvas-confetti/src/confetti.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1/dist/canvas-confetti.min.js"></script>
 
-        <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
