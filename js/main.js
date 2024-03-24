@@ -41,16 +41,6 @@ function checkWord() {
     }
 }
 
-// Reset Button
-const resetButton = document.getElementById('resetButton');
-resetButton.addEventListener('click', resetGame);
-
-function resetGame() {
-    cells.forEach(cell => {
-        cell.classList.remove('selected', 'found');
-    });
-    selectedLetters = [];
-}
 
 
 
