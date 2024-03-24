@@ -11,8 +11,9 @@ body.main-word-search {
   background-color: #F7CBCB;
 }
 
-.title, p {
+h1 {
   text-align: center;
+  font-size: 25px;
 }
 
 .word-search {
@@ -20,6 +21,14 @@ body.main-word-search {
   flex-direction: row;
   text-align: center;
   justify-content: center;
+}
+
+.word-instructions, .title, p {
+  text-align: center;
+}
+
+.title {
+  line-height: 20px;
 }
 
 .first-col-img,
@@ -70,6 +79,20 @@ body.main-word-search {
   background-color: rgb(54, 220, 54);
 }
 
+#resetButton {
+  background-color: white;
+  font-size: 20px;
+  font-family: "OpenDyslexic";
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#resetButton i {
+  margin-left: 7px;
+}
+
 
 /*** Drag and Drop ***/
 /* Drag and Drop 1 */
@@ -79,8 +102,6 @@ body.bg-drag {
 }
 
 .instructions h1 {
-  text-align: center;
-  font-size: 25px;
   margin: 0;
 }
 
