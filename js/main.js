@@ -80,9 +80,9 @@ function drop(event, dropAreaId) {
         
         void thumbsUpIcon.offsetWidth;
 
+        audioCorrect.play();
         thumbsUpIcon.style.transition = 'opacity 0.5s ease-in-out';
         thumbsUpIcon.style.opacity = '1';
-        audioCorrect.play();
 
         setTimeout(function() {
             thumbsUpIcon.style.opacity = '0';
@@ -125,14 +125,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener for click-correct link
     correctLink.addEventListener('click', function(event) {
         event.preventDefault();
-        showIcon(tickIcon);
         audioCorrect.play();
+        showIcon(tickIcon);
     });
     // Event listener for click-wrong link
     wrongLink.addEventListener('click', function(event) {
         event.preventDefault();
-        showIcon(xIcon);
         audioWrong.play();
+        showIcon(xIcon);
     });
 });
 
