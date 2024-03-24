@@ -193,62 +193,6 @@
 
     <audio id="victoryAudio" src="audio/check.mp3"></audio>
 
-    <script>
-        // WORD SEARCH
-        const wordsToFind = ['ICECREAM', 'SANDCASTLE', 'SHELL', 'FISH', 'BOOK'];
-        const cells = document.querySelectorAll('.cell');
-        let selectedLetters = [];
-
-        cells.forEach(cell => {
-            cell.addEventListener('click', () => {
-                if (!cell.classList.contains('found')) {
-                    const letter = cell.getAttribute('data-letter');
-                    if (selectedLetters.length === 0 || adjacent(selectedLetters[selectedLetters.length - 1], cell)) {
-                        cell.classList.toggle('selected');
-                        if (cell.classList.contains('selected')) {
-                            selectedLetters.push(cell);
-                        } else {
-                            selectedLetters.pop();
-                        }
-                        checkWord();
-                    }
-                }
-            });
-        });
-
-        function adjacent(cell1, cell2) {
-            const index1 = Array.from(cells).indexOf(cell1);
-            const index2 = Array.from(cells).indexOf(cell2);
-            const row1 = Math.floor(index1 / 100);
-            const col1 = index1 % 100;
-            const row2 = Math.floor(index2 / 100);
-            const col2 = index2 % 100;
-            return Math.abs(row1 - row2) <= 1 && Math.abs(col1 - col2) <= 1;
-        }
-
-        const victoryAudio = document.getElementById('victoryAudio');
-
-        function checkWord() {
-            const selectedWord = selectedLetters.map(cell => cell.getAttribute('data-letter')).join('');
-            if (wordsToFind.includes(selectedWord)) {
-                selectedLetters.forEach(cell => cell.classList.add('found'));
-                selectedLetters = [];
-                victoryAudio.play();
-            }
-        }
-
-        // Reset Button
-        const resetButton = document.getElementById('resetButton');
-        resetButton.addEventListener('click', resetGame);
-
-        function resetGame() {
-            cells.forEach(cell => {
-                cell.classList.remove('selected', 'found');
-            });
-            selectedLetters = [];
-        }
-    </script>
-
     <script src="js/main.js"></script>
 </body>
 </html>
