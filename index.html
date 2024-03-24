@@ -191,6 +191,8 @@
         <button id="resetButton">Reset<i class="fa fa-retweet"></i></button>
     </div>
 
+    <audio id="victoryAudio" src="audio/check.mp3"></audio>
+
     <script>
         // WORD SEARCH
         const wordsToFind = ['ICECREAM', 'SANDCASTLE', 'SHELL', 'FISH', 'BOOK'];
@@ -224,11 +226,14 @@
             return Math.abs(row1 - row2) <= 1 && Math.abs(col1 - col2) <= 1;
         }
 
+        const victoryAudio = document.getElementById('victoryAudio');
+
         function checkWord() {
             const selectedWord = selectedLetters.map(cell => cell.getAttribute('data-letter')).join('');
             if (wordsToFind.includes(selectedWord)) {
                 selectedLetters.forEach(cell => cell.classList.add('found'));
                 selectedLetters = [];
+                victoryAudio.play();
             }
         }
 
