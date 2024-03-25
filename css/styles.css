@@ -157,37 +157,6 @@ body.bg-drag {
     transition: 0.5s ease-in-out;
 }
 
-.drag-and-drop1 .background-img img {
-  position: relative;
-  z-index: -1;
-  width: 550px;
-  left: -50%;
-  margin-top: 30px;
-}
-
-
-.drag-and-drop1 .box {
-  width: 120px;
-  height: 120px;
-  cursor: pointer;
-  margin: auto;
-  position: absolute;
-  left: 5%;
-  transform: translateX(-50%);
-}
-
-.drag-and-drop1 #dropArea1 {
-  bottom: 25%;
-  left: 12%;
-  transform: translateX(-50%);
-}
-
-.drag-and-drop1 #dropArea2 {
-  top: 15%;
-  left: -22%;
-  transform: translateX(-50%);
-}
-
 .next, .back {
   color: black;
   position: absolute;
@@ -224,8 +193,8 @@ body.bg-drag {
   opacity: 0;
 }
 
-/* Drag and Drop 2 */
-.drag-and-drop2 .background-img img {
+/* Drag and Drop 1 */
+.drag-and-drop1 .background-img img {
   position: relative;
   z-index: -1;
   width: 450px;
@@ -233,7 +202,7 @@ body.bg-drag {
   margin-top: 70px;
 }
 
-.drag-and-drop2 .box {
+.drag-and-drop1 .box {
   width: 150px;
   height: 150px;
   cursor: pointer;
@@ -244,20 +213,20 @@ body.bg-drag {
   transform: translateX(-50%);
 }
 
-.drag-and-drop2 #dropArea1 {
+.drag-and-drop1 #dropArea1 {
   top: 28%;
   left: 0%;
   transform: translateX(-50%);
 }
 
-.drag-and-drop2 #dropArea2 {
+.drag-and-drop1 #dropArea2 {
   bottom: 18%;
   left: 0%;
   transform: translateX(-50%);
 }
 
-/* Drag and Drop 3 */
-.drag-and-drop3 .background-img img {
+/* Drag and Drop 2 */
+.drag-and-drop2 .background-img img {
   position: relative;
   z-index: -1;
   width: 650px;
@@ -265,7 +234,7 @@ body.bg-drag {
   margin-top: 100px;
 }
 
-.drag-and-drop3 .box {
+.drag-and-drop2 .box {
   width: 150px;
   height: 150px;
   cursor: pointer;
@@ -276,25 +245,25 @@ body.bg-drag {
   transform: translateX(-50%);
 }
 
-.drag-and-drop3 #dropArea1 {
+.drag-and-drop2 #dropArea1 {
   top: 37%;
   left: 5%;
   transform: translateX(-50%);
 }
 
-.drag-and-drop3 #dropArea2 {
+.drag-and-drop2 #dropArea2 {
   bottom: 7%;
   left: 5%;
   transform: translateX(-50%);
 }
 
-/* Drag and Drop 4 */
-body.bg-drag.drag-and-drop4 {
+/* Drag and Drop 3 */
+body.bg-drag.drag-and-drop3 {
   background: url("../img/background-sand.jpg") fixed 50% 50%;
   background-size: cover;
 }
 
-.drag-and-drop4 .background-img img {
+.drag-and-drop3 .background-img img {
   position: relative;
   z-index: -1;
   width: 700px;
@@ -302,7 +271,7 @@ body.bg-drag.drag-and-drop4 {
   margin-top: 10px;
 }
 
-.drag-and-drop4 .box {
+.drag-and-drop3 .box {
   width: 150px;
   height: 150px;
   cursor: pointer;
@@ -313,20 +282,20 @@ body.bg-drag.drag-and-drop4 {
   transform: translateX(-50%);
 }
 
-.drag-and-drop4 #dropArea1 {
+.drag-and-drop3 #dropArea1 {
   top: 45%;
   left: 0%;
   transform: translateX(-50%);
 }
 
-.drag-and-drop4 #dropArea2 {
+.drag-and-drop3 #dropArea2 {
   top: 45%;
   left: 60%;
   transform: translateX(-50%);
 }
 
-/* Drag and Drop 5 */
-.drag-and-drop5 .background-img img {
+/* Drag and Drop 4 */
+.drag-and-drop4 .background-img img {
   position: relative;
   z-index: -1;
   width: 420px;
@@ -334,7 +303,7 @@ body.bg-drag.drag-and-drop4 {
   margin-top: 0px;
 }
 
-.drag-and-drop5 .box {
+.drag-and-drop4 .box {
   width: 130px;
   height: 130px;
   cursor: pointer;
@@ -345,20 +314,20 @@ body.bg-drag.drag-and-drop4 {
   transform: translateX(-50%);
 }
 
-.drag-and-drop5 #dropArea1 {
+.drag-and-drop4 #dropArea1 {
   top: 85%;
   left: 0%;
   transform: translateX(-50%);
 }
 
-.drag-and-drop5 #dropArea2 {
+.drag-and-drop4 #dropArea2 {
   top: 50%;
   left: 0%;
   transform: translateX(-50%);
 }
 
-/* Drag and Drop 6 */
-.drag-and-drop6 .background-img img {
+/* Drag and Drop 5 */
+.drag-and-drop5 .background-img img {
   position: relative;
   z-index: -1;
   width: 380px;
@@ -366,7 +335,7 @@ body.bg-drag.drag-and-drop4 {
   margin-top: 30px;
 }
 
-.drag-and-drop6 .box {
+.drag-and-drop5 .box {
   width: 130px;
   height: 130px;
   cursor: pointer;
@@ -377,13 +346,13 @@ body.bg-drag.drag-and-drop4 {
   transform: translateX(-50%);
 }
 
-.drag-and-drop6 #dropArea1 {
+.drag-and-drop5 #dropArea1 {
   top: 70%;
   left: 60%;
   transform: translateX(-50%);
 }
 
-.drag-and-drop6 #dropArea2 {
+.drag-and-drop5 #dropArea2 {
   top: 70%;
   left: 0%;
   transform: translateX(-50%);
