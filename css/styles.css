@@ -142,6 +142,38 @@ body.bg-drag {
   position: absolute;
 }
 
+/* Drag and Drop 1 */
+.drag-and-drop1 .background-img img {
+  position: relative;
+  z-index: -1;
+  width: 450px;
+  left: -50%;
+  margin-top: 70px;
+}
+
+.drag-and-drop1 .box {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  left: 0%;
+  bottom: -20%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop1 #dropArea1 {
+  top: 28%;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+.drag-and-drop1 #dropArea2 {
+  bottom: 18%;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
 .fa-thumbs-up {
   position: absolute;
   color: yellow;
@@ -193,37 +225,7 @@ body.bg-drag {
   opacity: 0;
 }
 
-/* Drag and Drop 1 */
-.drag-and-drop1 .background-img img {
-  position: relative;
-  z-index: -1;
-  width: 450px;
-  left: -50%;
-  margin-top: 70px;
-}
 
-.drag-and-drop1 .box {
-  width: 150px;
-  height: 150px;
-  cursor: pointer;
-  margin: auto;
-  position: absolute;
-  left: 0%;
-  bottom: -20%;
-  transform: translateX(-50%);
-}
-
-.drag-and-drop1 #dropArea1 {
-  top: 28%;
-  left: 0%;
-  transform: translateX(-50%);
-}
-
-.drag-and-drop1 #dropArea2 {
-  bottom: 18%;
-  left: 0%;
-  transform: translateX(-50%);
-}
 
 /* Drag and Drop 2 */
 .drag-and-drop2 .background-img img {
